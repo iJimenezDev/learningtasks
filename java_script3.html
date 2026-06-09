@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> .: Javascript 03 :. </title>
+        <style>
+            #sum{
+                font-style: bold;
+                color: red;
+            }
+        </style>
+        <script>
+            function click_me(){
+                let first_num = prompt("Enter 1st Number: ");
+                let second_num = prompt("Enter 2nd Number: ");
+                let sum = parseFloat(first_num) + parseFloat(second_num);
+                alert ("The Answer is : " + sum);
+
+                document.getElementById("result").innerHTML = "Sum of " + first_num + " and " + second_num + " = <span id='sum'>" + sum + "</span>";
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="return click_me()">Click me to add 2 numbers</button>
+        <div id="result">Waiting for the answer</div>
+    </body>
+</html>
