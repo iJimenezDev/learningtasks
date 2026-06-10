@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>.:JavaScript 06:.</title>
+
+    <style type="text/css">
+        .image-container {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function setVisibility(value) {
+            document.getElementById("imageBox").style.display = value;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="image-container" id="imageBox">
+        <img src="photos/sha.jfif" width="30%">
+    </div>
+
+    <a href="javascript:void(0)" onclick="setVisibility('block')">
+        Display image
+    </a> 
+    | 
+    <a href="javascript:void(0)" onclick="setVisibility('none')">
+        Hide image
+    </a>
+
+</body>
+</html>

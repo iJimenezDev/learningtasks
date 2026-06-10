@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+
+    <style>
+        #result {
+            font-weight: bold;
+            color: blue;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        function calculate() {
+
+            let first_num = prompt("Enter first number:");
+            let second_num = prompt("Enter second number:");
+            let operator = prompt("Choose operation (+, -, *, /):");
+
+            let num1 = Number(first_num);
+            let num2 = Number(second_num);
+            let result;
+
+            if (operator == "+") {
+                result = num1 + num2;
+            }
+            else if (operator == "-") {
+                result = num1 - num2;
+            }
+            else if (operator == "*") {
+                result = num1 * num2;
+            }
+            else if (operator == "/") {
+                result = num1 / num2;
+            }
+            else {
+                result = "Invalid operator";
+            }
+
+            alert("Result: " + result);
+
+            document.getElementById("result").innerHTML =
+                "Result: " + result;
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="calculate()">
+        Click to Calculate
+    </button>
+
+    <div id="result">
+        Waiting for input...
+    </div>
+
+</body>
+</html>
+
